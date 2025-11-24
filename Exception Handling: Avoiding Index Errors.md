@@ -1,53 +1,25 @@
-# 🔤 Dictionary-Python Program to Sort a Dictionary by Keys and Values
-
-This Python program demonstrates how to sort a dictionary:
-- Alphabetically by keys
-- Alphabetically by values
-
----
+# Exception Handling in Python: Avoiding Index Errors
 
 ## 🎯 Aim
-
-To write a Python program that sorts a dictionary's:
-- Keys in alphabetical order
-- Values in alphabetical order
-
----
+To write a Python program that handles an **IndexError** when trying to access an element beyond the available range of a list.
 
 ## 🧠 Algorithm
+1. Define a list `list1` with some integer elements.
+2. Use a **try-except** block:
+   - In the `try` block, attempt to access an index that is out of range (e.g., `list1[5]`).
+   - In the `except` block, catch the error and print a custom message `"You're out of list range"`.
+3. Print the result based on whether the index access succeeds or fails.
 
-1. **Start the program.**
-2. **Define** a dictionary with key-value pairs.
-3. **Sort by Keys**:
-   - Use `sorted(dictionary.items())`
-   - Convert the result to a dictionary using `dict()`
-4. **Sort by Values**:
-   - Use `sorted(dictionary.items(), key=lambda item: item[1])`
-   - Convert the result to a dictionary using `dict()`
-5. **Display** the original and sorted dictionaries.
-6. **End the program.**
-
----
-
-## 🧪Program
+## 🧾 Program
 ```
-def dictionairy(): 
-# Declaring hash function      
-key_value ={}    
-# Initializing the value 
-key_value[2] = 56       
-key_value[1] = 2 
-key_value[5] = 12 
-key_value[4] = 24 
-key_value[6] = 18      
-key_value[3] = 323 
-print ("Keys and Values sorted", 
-"in alphabetical order by the value") 
-print(sorted(key_value.items(), key = lambda kv:(kv[1], kv[0])))
-
+msg=[5, 10, 20]
+try:
+    print(msg[5])
+except IndexError:
+    print("You're out of list range")
 ```
-## Sample Output
-![4 3](https://github.com/user-attachments/assets/626c9945-2a4c-4b80-a6a3-e6d441c1b60d)
+## Output
+![4 4](https://github.com/user-attachments/assets/1045520c-73d5-4a17-9523-29e49f2a07bc)
 
 ## Result
 Thus,the program has been executed successfully.
